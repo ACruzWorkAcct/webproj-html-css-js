@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+}
+  
+html {
+    font-size: 72.5%;
+}
+
+.container {
+    background: linear-gradient(
+        rgba(13, 119, 196, 0.7),
+        rgba(2, 0, 105, 0.7));
+    background-size: cover;
+    height: 100vh;
+    perspective: 100rem;
+    width: 100%;
+}
+.forms-wrapper {
+    left: calc(50% - 25rem);
+    position: absolute;
+    top: calc(50% - 17.5rem);
+    transform-style: preserve-3d;
+    transform: rotateY(-10deg);
+    transition-duration: 2s;
+    transition-property: transform;
+}
+.forms-wrapper form {
+    align-items: center;
+    background-color: rgba(78, 194, 103, 0.925);
+    border: 1px solid rgb(209, 0, 0);
+    display: flex;
+    flex-direction: column;
+    height: 35rem;
+    justify-content: space-around;
+    position: absolute;
+    width: 50rem;
+}
+.forms-wrapper.change {
+    transform: rotateY(80deg);
+}
