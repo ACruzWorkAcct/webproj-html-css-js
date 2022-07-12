@@ -17,6 +17,12 @@ html {
     width: 100%;
     opacity: 0;
     visibility: hidden;
+    transition: all .5s;
+}
+.search-input-wrapper.change {
+    opacity: 1;
+    visibility: visible;
+    transition: all .5s 1s;
 }
 .search-input {
     align-items: center;
@@ -40,10 +46,14 @@ html {
     cursor: pointer;
 }
 .search-icon {
+    animation: searchIconFrames2 .5s forwards;
     font-size: 1.5rem;
     position: absolute;
     top: 1.7rem;
     right: 3rem;
+}
+.search-icon.change {
+    animation: searchIconFrames 1s forwards;
 }
 .search-icon i {
     color: #999;
@@ -65,5 +75,13 @@ html {
     100% {
         top: 1.7rem;
         right: calc(50% + 16rem);
+    }
+}
+@keyframes searchIconFrames2 {
+    0% {
+        right: calc(50% + 16rem)
+    }
+    100% {
+        right: 3rem;
     }
 }
